@@ -57,7 +57,6 @@ The dataset includes the following attributes:
 
 The Power BI dashboard provides an interactive overview of agricultural production and climate-related patterns.
 
-![Climate Factors and Agricultural Yields Dashboard](images/dashboard.png)
 
 ### Key Dashboard Components
 
