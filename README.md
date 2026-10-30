@@ -1,117 +1,191 @@
-# Climate-factors-and-Agricultural-Yields
+# Climate Factors and Agricultural Yields
+### Exploring the Relationship Between Climate Conditions and Crop Productivity Across Indian States
 
+## 1. Introduction
 
-## About the Project
+Agriculture is closely influenced by environmental conditions such as rainfall, temperature, humidity and soil composition. Understanding how these factors relate to crop productivity can help identify agricultural patterns and support better-informed planning.
 
-Agriculture depends on several factors, including rainfall, temperature, humidity, soil conditions, and growing seasons. However, these factors can vary from one region to another, and crop yields can vary too.
+**Climate Factors and Agricultural Yields** is a Business Analytics project that explores the relationship between climatic conditions and agricultural performance across different Indian states.
 
-This project explores how these climate and agricultural factors relate to crop productivity across different Indian states and districts. Using Excel and Power BI, I aim to analyze the data, identify useful patterns, and present the findings through an interactive dashboard.
+Using Excel for data handling and Power BI for analysis and visualization, the project examines crop production, cultivated area and yield across different years, seasons and geographical regions. It also explores how temperature, precipitation and humidity vary across crops and how these variations relate to agricultural yield.
 
-The idea is to make agricultural data easier to understand and see how data analysis can help support better agricultural planning and decision-making.
+The objective is to transform agricultural data into meaningful insights through interactive dashboards rather than make unsupported assumptions about the causes of changes in crop productivity.
 
-**Note:** The dataset currently used for this project is synthetic and created for learning purposes. It does not represent verified agricultural records from India.
+## 2. Project Objectives
 
-## What I Want to Find Out
+- Analyze agricultural production and yield across Indian states.
+- Examine the relationship between temperature, rainfall and humidity and crop yield.
+- Compare agricultural performance across Kharif, Rabi and Annual seasons.
+- Identify crops and geographical regions with comparatively higher production.
+- Build an interactive dashboard to support data exploration and business-style decision-making.
 
-Through this project, I want to answer a few questions:
+## 3. Tools and Technologies
 
-- Which states and districts have higher average crop yields?
-- Which crops contribute the most to total agricultural production?
-- Does crop yield vary across Kharif, Rabi, and other growing seasons?
-- How are rainfall, temperature, and humidity related to crop yields?
-- How have crop production and yield changed over the years?
-- Do different soil types show any noticeable differences in productivity?
-
-## Tools Used
-
-- **Microsoft Excel:** To clean the data, check for inconsistencies, and perform basic analysis.
-- **Power Query:** To organize and transform the dataset.
-- **Power BI:** To build an interactive dashboard and present the findings visually.
-
-## Dataset
-
-The dataset contains 5,000 synthetic records covering different Indian states, districts, crops, years, and growing seasons.
-
-It includes the following information:
-
-| Column | What it represents |
+| Tool | Purpose |
 |---|---|
-| State_Name | Name of the state |
-| District | Name of the district |
-| Crop_Year | Year of the record |
-| Season | Agricultural season |
-| Crop | Type of crop |
-| Area (ha) | Land area used for cultivation |
-| Production (tonnes) | Total crop production |
-| Yield (kg/ha) | Crop productivity per hectare |
-| Temperature (°C) | Temperature associated with the record |
-| Precipitation (mm) | Rainfall or precipitation |
-| Humidity (%) | Relative humidity |
-| Soil_Type | Type of soil |
+| Microsoft Excel | Dataset inspection, data organization and preliminary analysis |
+| Power BI | Data modeling, visualizations and interactive dashboard development |
+| Power Query | Data transformation and preparation |
+| DAX | Calculated measures and KPI development |
 
-Since the dataset is synthetic, any patterns found during the analysis are useful for practicing data analysis but should not be treated as actual agricultural findings.
+**Domain:** Business Analytics / Agriculture
 
-## Dashboard Overview
+## 4. Dataset Overview
 
-The Power BI dashboard is designed to bring the main findings together in one place.
+The project uses a dataset containing 5,000 agricultural records covering the period 1997–2014.
 
-It aims to include:
+The dataset includes the following attributes:
 
-- **Key Performance Indicators:** Total production, cultivated area, average yield, average temperature, and precipitation.
-- **Year-wise Trends:** Changes in crop production and yield over time.
-- **State-wise Comparison:** Differences in average crop yield across states.
-- **Climate Analysis:** Scatter plots showing the relationship between yield and temperature, rainfall, and humidity.
-- **Crop-wise Analysis:** Comparison of production across different crops.
-- **Seasonal Analysis:** Differences in average yield across growing seasons.
-- **Interactive Filters:** Options to explore results by state, district, crop, season, year, and soil type.
+| Category | Variables |
+|---|---|
+| Geography | State Name, District |
+| Time | Crop Year, Season |
+| Agriculture | Crop, Area, Production, Yield |
+| Climate | Temperature, Precipitation, Humidity |
+| Soil | Soil Type |
 
-## How I Approach the Analysis
+**Analytical dimensions:**
+- 10 Indian states
+- 8 crop categories
+- 3 seasonal categories
+- 7 soil types
+- 18 years of observations
 
-I plan to work through the project in the following stages:
+*Note: The supplied dataset is synthetic. Its results are intended for analytical practice and dashboard demonstration, not as verified official agricultural statistics.*
 
-1. **Data cleaning:** Check for missing values, duplicate records, inconsistent formats, and unusual values.
-2. **Data validation:** Verify the units and check whether production, cultivated area, and yield are consistent.
-3. **Exploratory data analysis:** Use Excel to compare crops, states, seasons, and climate variables.
-4. **Dashboard development:** Use Power BI to turn the analysis into charts, KPIs, and interactive filters.
-5. **Insights and interpretation:** Summarize the patterns found and explain what they might mean.
+## 5. Dashboard and Visualizations
 
-### Understanding Crop Yield
+The Power BI dashboard provides an interactive overview of agricultural production and climate-related patterns.
 
-Crop yield measures how much crop is produced per unit of cultivated land.
+![Climate Factors and Agricultural Yields Dashboard](images/dashboard.png)
 
-I calculate it using:
+### Key Dashboard Components
 
-`Yield (kg/ha) = Production (tonnes) × 1,000 / Area (ha)`
+**A. KPI Cards**
 
-This allows me to compare productivity across records with different cultivated areas.
+Provides a quick overview of:
+- Total Production
+- Total Cultivated Area
+- Average Temperature
+- Average Rainfall
+- Weighted Average Yield
 
-## What I Hope to Learn
+**B. Production by Crop**
 
-By completing this project, I aim to improve my skills in data cleaning, exploratory data analysis, Excel, Power Query, Power BI, and communicating insights through visualizations.
+A comparative visualization showing how total agricultural production is distributed across different crops, helping identify the major contributors to overall output.
 
-I also want to understand how to interpret relationships between variables without jumping to conclusions. For example, a relationship between rainfall and crop yield does not necessarily mean that rainfall alone is responsible for changes in productivity.
+**C. Crop by Season**
 
-## Limitations and Ethical Considerations
+A donut chart displaying the distribution of records across Kharif, Rabi and Annual categories.
 
-- **Synthetic data:** The current dataset is intended for practice and does not represent verified real-world agricultural conditions.
-- **Correlation is not causation:** Climate variables may be related to crop yield, but other factors, such as irrigation, fertilizers, seeds, and farming practices, can also affect productivity.
-- **Fairness:** Differences in productivity should not be used to make unsupported assumptions about smallholder farmers or rain-fed agricultural communities.
-- **Data privacy:** Any future use of real farmer-level data should protect personal and identifiable information.
-- **Responsible interpretation:** Any conclusions or forecasts should clearly communicate their limitations.
+**D. Climate and Yield Analysis**
 
-## Future Scope
+Three scatterplots explore the relationship between:
+- Yield vs Humidity
+- Yield vs Precipitation
+- Yield vs Temperature
 
-Some improvements I would like to explore are:
+These visualizations help identify patterns, clusters and possible associations between climatic variables and crop productivity.
 
-- Using verified agricultural and weather datasets.
-- Studying additional factors such as irrigation, fertilizer use, and soil quality.
-- Comparing climate patterns and crop yields over longer periods.
-- Exploring crop-yield prediction after completing the initial analysis.
-- Evaluating prediction accuracy before using any model for decision-making.
+**E. Interactive Filters**
 
+Users can explore the dashboard using:
+- Year range
+- Crop
+- State
+- Season
+- Soil Type
 
-## Conclusion
+### Key Observations
 
-This project is an opportunity to apply data analytics to an area where data can support practical decisions. By exploring agricultural and climate-related variables, I aim to turn a raw dataset into an understandable dashboard and develop a clearer picture of how to analyze data, identify patterns, and communicate findings responsibly.
+Based on the current dashboard:
 
+1. **Sugarcane dominates production:** It contributes approximately 73% of total production (215M out of 294M tonnes).
+2. **Climate relationships vary by crop:** The scatterplots suggest different yield patterns across crops when compared against rainfall, temperature and humidity.
+3. **Rice shows a comparatively positive relationship:** Its yield displays a slight positive association with the three climate variables in the current analysis.
+4. **Sugarcane shows weaker climate sensitivity:** Its yield patterns appear comparatively stable across the observed climate ranges.
+5. **Yield excluding sugarcane is more stable:** Removing sugarcane helps make comparisons between the other crops easier to interpret.
 
+These are exploratory observations from the supplied dataset, not evidence of causation.
+
+## 6. How to Use the Dashboard
+
+1. Open the Power BI dashboard file (`.pbix`) using Microsoft Power BI Desktop.
+2. Use the Year slider to select a particular time period.
+3. Select a crop to examine its production and yield patterns.
+4. Choose a state to compare geographical differences.
+5. Use the Season buttons to explore Kharif, Rabi and Annual records.
+6. Select a soil type to investigate patterns across different soil categories.
+7. Observe how the KPI cards and visualizations change with the selected filters.
+8. Hover over charts to view additional information through tooltips.
+
+**Tip:** Start with the overall dashboard view before applying filters. This makes it easier to understand the broader distribution of agricultural production.
+
+## 7. Getting Started
+
+### Prerequisites
+
+- Microsoft Excel
+- Microsoft Power BI Desktop
+- Basic understanding of data analysis and visualization
+
+### Installation and Setup
+
+1. Clone or download this repository.
+2. Open the Excel dataset from the `Dataset` folder.
+3. Open the `.pbix` file from the `Dashboard` folder using Power BI Desktop.
+4. If required, update the dataset source path in Power BI.
+5. Refresh the data to load the dataset.
+6. Explore the dashboard using the available filters and visualizations.
+
+## 8. Contributor Instructions
+
+Contributions and suggestions are welcome.
+
+To contribute:
+
+1. Fork this repository.
+2. Create a new branch for your changes.
+3. Make the required modifications to the dataset, dashboard or documentation.
+4. Test the updated dashboard in Power BI Desktop.
+5. Commit your changes with a descriptive commit message.
+6. Submit a Pull Request explaining the changes.
+
+## 9. Contribution Guidelines
+
+- Maintain consistency in column names, data types and units.
+- Ensure that data transformations do not introduce unintended errors.
+- Use appropriate visualizations for the analytical question being addressed.
+- Clearly label charts, axes, KPIs and measurement units.
+- Avoid presenting correlation as causation.
+- Document new calculated measures and significant changes.
+- Keep the dashboard clean, readable and easy to navigate.
+
+## 10. Known Issues and Limitations
+
+- The dataset is synthetic and does not represent verified real-world agricultural statistics.
+- The analysis covers a limited set of states, crops and years.
+- Correlations do not establish causal relationships between climatic conditions and crop yield.
+- Agricultural productivity is influenced by additional factors such as irrigation, farming practices, fertilizers, technology and pest conditions, which are not fully represented.
+- Comparisons of total production should account for differences in cultivated area and crop characteristics.
+- Sugarcane has a substantially higher yield scale than other crops, which can make direct comparisons difficult.
+- Dashboard results depend on the selected filters and the underlying dataset.
+
+## 11. Future Scope
+
+Potential improvements include:
+
+- Integrating verified agricultural and meteorological datasets.
+- Expanding geographical coverage to include more Indian states and districts.
+- Introducing year-over-year comparisons and trend analysis.
+- Examining the influence of soil characteristics and seasonal variations in greater detail.
+- Adding regional comparisons and more advanced statistical analysis.
+- Developing predictive models as a separate extension of the project.
+
+## 12. Acknowledgements
+
+This project was developed as part of an exploration of Business Analytics, agricultural data and interactive visualization using Microsoft Excel and Power BI.
+
+**Project:** Climate Factors and Agricultural Yields  
+**Domain:** Business Analytics / Agriculture  
+**Tools:** Microsoft Excel | Power BI | Power Query | DAX
